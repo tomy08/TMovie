@@ -104,7 +104,7 @@ function createMovies(movies, container, observe = false) {
       span.textContent = movie.title;
       movieContainer.append(span);
       img.style.animation = "none";
-      img.setAttribute("src", "../img/Image-not-available.png");
+      img.setAttribute("src", "./img/Image-not-available.png");
     });
     // Set the animation delay of the image based on the delay variable
     img.style.setProperty("animation-delay", `${delay}s`);
