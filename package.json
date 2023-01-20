@@ -1,0 +1,22 @@
+{
+  "name": "tmovie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TOM-SPIDER-DEV/TMovie.git"
+  },
+  "author": "Tomas Santa Cruz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TOM-SPIDER-DEV/TMovie/issues"
+  },
+  "homepage": "https://github.com/TOM-SPIDER-DEV/TMovie#readme",
+  "dependencies": {
+    "axios": "^1.2.2"
+  }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMovie</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="main">
+      <header>
+        <span class="header-arrow inactive">&lt;</span>
+        <section class="main-header">
+          <h1 class="title">TMovie</h1>
+        </section>
+        <form action="" class="search-form">
+          <input class="search" type="text" placeholder="Search movies" />
+          <button class="search-btn">🔍</button>
+        </form>
+        <section class="movie inactive">
+          <div class="header-container--blur"></div>
+          <div class="header-container--img">
+            <img src="" alt="" class="header-container--long" />
+          </div>
+        </section>
+      </header>
+
+      <section class="main">
+        <section class="likedPreview boxPreview">
+          <div class="liked-preview-header preview-header">
+            <h2 class="likedPreview-subtitle preview-subtitle">My list</h2>
+          </div>
+          <div class="flex-box">
+            <!-- Flecha izquierda -->
+            <div class="arrow left trending"><</div>
+            <article class="likedPreview-movieList preview-movieList"></article>
+            <!-- Flecha derecha -->
+            <div class="arrow right trending">></div>
+          </div>
+        </section>
+        <section class="trendingPreview boxPreview">
+          <div class="trending-preview-header preview-header">
+            <h2 class="trendingPreview-subtitle preview-subtitle">Trending</h2>
+          </div>
+          <div class="flex-box">
+            <!-- Flecha izquierda -->
+            <div class="arrow left trending"><</div>
+            <article
+              class="trendingPreview-movieList preview-movieList"
+            ></article>
+            <!-- Flecha derecha -->
+            <div class="arrow right trending">></div>
+          </div>
+        </section>
+        <section class="theatersPreview boxPreview">
+          <div class="theaters-preview-header preview-header">
+            <h2 class="theatersPreview-subtitle preview-subtitle">
+              In cinemas
+            </h2>
+          </div>
+          <div class="flex-box">
+            <!-- Flecha izquierda -->
+            <div class="arrow left theatre"><</div>
+            <article
+              class="theatersPreview-movieList preview-movieList"
+            ></article>
+            <!-- Flecha derecha -->
+            <div class="arrow right theatre">></div>
+          </div>
+        </section>
+
+        <section id="categoriesPreview" class="categoriesPreview-container">
+          <h2 class="categoriesPreview-title preview-subtitle">Categories</h2>
+          <div class="grid-genre-container" id="genre-container"></div>
+        </section>
+      </section>
+
+      <section class="generic-list inactive">
+        <h1 class="title" id="generic-list-title"></h1>
+        <div class="grid">
+          <!-- <div class="movie-container">
+          <img
+            src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div> -->
+        </div>
+      </section>
+      <section id="movieDetail" class="movieDetail-container inactive">
+        <h1 class="movieDetail-title">Deadpool</h1>
+
+        <span class="movieDetail-score">7.6</span>
+        <h3 class="movieDetail-description">
+          Wisecracking mercenary Deadpool battles the evil and powerful Cable
+          and other bad guys to save a boy's life.
+        </h3>
+
+        <article class="categories-list grid-genre-container">
+          <!-- <div class="category-container">
+            <h3 id="id28" class="category-title">Romance</h3>
+          </div> -->
+        </article>
+        <button class="favorite-btn"></button>
+        <article class="relatedMovies-container">
+          <h2 class="relatedMovies-title">Similar movies</h2>
+          <div class="flex-box">
+            <!-- Flecha izquierda -->
+            <div class="arrow left similarMovies"><</div>
+            <article
+              class="relatedMovies-scrollContainer preview-movieList"
+              style="padding-bottom: 128px"
+            >
+              <!-- <div class="movie-container">
+                <img
+                  src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+                  class="movie-img"
+                  alt="Nombre de la película"
+                />
+              </div> -->
+            </article>
+            <!-- Flecha derecha -->
+            <div class="arrow right similarMovies">></div>
+          </div>
+        </article>
+      </section>
+      <footer class="">
+        <h3>Made by Tomas Santa Cruz</h3>
+        <a href="https://github.com/TOM-SPIDER-DEV/TMovie"
+          ><img src="../img/pngegg (18).png"
+        /></a>
+      </footer>
+    </section>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="../src/arrow.js"></script>
+    <script src="../src/main.js"></script>
+    <script src="../src/navigator.js"></script>
+  </body>
+</html>
