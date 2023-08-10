@@ -286,12 +286,18 @@ async function getRelatedMovieById(id) {
 }
 
 function getLikedMovies() {
+  const likedMovieContainer = document.querySelector(".likedPreview");
+
   // Select the container where the liked movies will be displayed
   const container = document.querySelector(".likedPreview-movieList");
   // Retrieve the movies that the user has liked
   const likedMovies = likedMovieList();
   container.innerHTML = "";
-  const moviesArray = Object.values(likedMovies);
-  // Function to create and display the liked movies in the selected container
-  createMovies(moviesArray, container, true);
+  if (Object.keys(likedMovies).length === 0) {
+    likedMovieContainer.innerHTML = ``;
+  } else {
+    const moviesArray = Object.values(likedMovies);
+    // Function to create and display the liked movies in the selected container
+    createMovies(moviesArray, container, true);
+  }
 }

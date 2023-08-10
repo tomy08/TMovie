@@ -5,7 +5,6 @@ const movieHeader = $(".movie");
 const genericList = $(".generic-list");
 const movieDetail = $(".movieDetail-container");
 const arrow = $(".header-arrow");
-const footer = $("footer");
 const searchForm = $(".search-form");
 const searchBtn = $(".search-btn");
 const searchInput = $(".search");
@@ -80,14 +79,14 @@ function navigator() {
 function homePage() {
   mainHeader.classList.remove("inactive");
   mainSection.classList.remove("inactive");
-  footer.classList.remove("inactive");
+
   searchForm.classList.remove("inactive");
   searchForm.classList.remove("searcher-form-search");
   movieHeader.classList.add("inactive");
   genericList.classList.add("inactive");
   movieDetail.classList.add("inactive");
   arrow.classList.add("inactive");
-  footer.setAttribute("style", "position: fixed;");
+
   getCategoriesPreview();
   getCinemaMoviesPreview();
   getTrendingPreview();
@@ -102,8 +101,6 @@ function searchPage() {
   genericList.classList.remove("inactive");
   movieDetail.classList.add("inactive");
   arrow.classList.remove("inactive");
-  footer.classList.remove("inactive");
-  footer.setAttribute("style", "position: fixed;");
   const h1 = $("#generic-list-title");
   h1.classList.add("inactive");
   const [_, query] = location.hash.split("=");
@@ -118,8 +115,6 @@ function moviePage() {
   genericList.classList.add("inactive");
   movieDetail.classList.remove("inactive");
   arrow.classList.remove("inactive");
-  footer.classList.remove("inactive");
-  footer.setAttribute("style", "position:relative;");
   const [_, movieId] = location.hash.split("=");
   getMovieById(movieId);
 }
@@ -133,8 +128,6 @@ function categoryPage() {
   genericList.classList.remove("inactive");
   movieDetail.classList.add("inactive");
   arrow.classList.remove("inactive");
-  footer.classList.remove("inactive");
-  footer.setAttribute("style", "position: fixed;");
   const [_, data] = location.hash.split("=");
   const [idGenre, nameMovie] = data.split("-");
   const h1 = $("#generic-list-title");
